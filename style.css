@@ -16,13 +16,20 @@ body {
 }
 
 header {
-    padding: 1rem 8rem;
+    padding: 1rem 4rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: var(--secondary-color);
     position: fixed;
     top: 0;
     z-index: 1;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -38,6 +45,7 @@ h1 {
     font-size: 1rem;
     color: white;
     font-family: inherit;
+    width: 100%;
 }
 
 .search:focus {
@@ -122,4 +130,24 @@ main {
 
 .movie:hover .overview {
     transform: translateY(0);
+}
+
+@media only screen and (max-width: 1024px) {
+    header {
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .search {
+        width: 150px;
+    }
 }
