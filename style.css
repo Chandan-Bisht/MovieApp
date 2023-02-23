@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #171717;
+    --secondary-color: #1D1D1D;
+    --tertiary-color: #f7b122
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--primary-color);
+}
+
+header {
+    padding: 1rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+h1 {
+    color: var(--tertiary-color);
+}
+
+.search {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--tertiary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: white;
+    font-family: inherit;
+}
+
+.search:focus {
+    outline: 0;
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 110px 0 40px 0;
+}
+
+.search::placeholder {
+    color: white;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    background-color: green;
+}
+
+.movie-info span.yellow {
+    background-color: var(--tertiary-color);
+}
+
+.movie-info span.red {
+    background-color: red;
+}
+
+.overview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.movie:hover {
+    border: 2px solid var(--tertiary-color);
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
