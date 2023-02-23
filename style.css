@@ -124,6 +124,10 @@ main {
     transition: transform 0.3s ease-in;
 }
 
+.overview p {
+    padding: 1rem 0;
+}
+
 .movie:hover {
     border: 2px solid var(--tertiary-color);
 }
